@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    padding: 20px;
+}
+
+.character-card {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+}
+
+.character-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.alive {
+    color: green;
+}
+
+.dead {
+    color: red;
+}
+
+.unknown {
+    color: gray;
+}
+
+#charactersContainer {
+    display: flex;
+    flex-wrap: wrap;
+}

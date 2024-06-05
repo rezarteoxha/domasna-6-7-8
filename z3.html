@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" />
+    <title>Traffic Light</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .traffic-light {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 3px solid black;
+        border-radius: 24px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        background: linear-gradient(to bottom, #666, #444);
+      }
+
+      .light {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 10px;
+        border: 1px solid #000;
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .orange {
+        background-color: orange;
+      }
+
+      .green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="traffic-light">
+      <div class="light" id="redLight"></div>
+      <div class="light" id="orangeLight"></div>
+      <div class="light" id="greenLight"></div>
+    </div>
+
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'r') {
+          document.getElementById('redLight').classList.add('red');
+          document.getElementById('orangeLight').classList.remove('orange');
+          document.getElementById('greenLight').classList.remove('green');
+        } else if (event.key === 'o') {
+          document.getElementById('redLight').classList.remove('red');
+          document.getElementById('orangeLight').classList.add('orange');
+          document.getElementById('greenLight').classList.remove('green');
+        } else if (event.key === 'g') {
+          document.getElementById('redLight').classList.remove('red');
+          document.getElementById('orangeLight').classList.remove('orange');
+          document.getElementById('greenLight').classList.add('green');
+        }
+      });
+    </script>
+  </body>
+</html>
